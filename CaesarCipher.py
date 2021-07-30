@@ -3,7 +3,7 @@ def key(n):
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     cnt = 0
     for letters in alphabet:
-        key[letters] = alphabet[(cnt+n) % 26]
+        key[letters] = alphabet[(cnt+n) % len(alphabet)]
         cnt += 1
     print(key)
     return key
