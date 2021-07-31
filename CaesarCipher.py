@@ -34,10 +34,8 @@ cipher = encryptor()
 decryptor()
 # Attack commencing below by Eve, Eve only knows the cipher "QHYHU" and nothing about the above code and wants to break it. He guesses it involves the Caesar cipher so he commences attack
 def key(n):
-    
     key = {}
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    
     cnt = 0
     for letters in alphabet:
         key[letters] = alphabet[(cnt+n) % 26]
@@ -55,7 +53,6 @@ def decryptor(key,cipher):
             decrypted_message += values
     decrypted_message = decrypted_message.lower()
     return decrypted_message
-
 for i in range(24):
     dkey = key(i)
     message = decryptor(dkey,"QHYHU")
